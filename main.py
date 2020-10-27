@@ -30,6 +30,7 @@ if os.path.exists(output_folder) != True:
     os.mkdir(output_folder)
     
 def createFileList(search_path):
+    print("search for files in {} ...".format(search_path))
     for (path, dirs, files) in os.walk(search_path):
         for entry in files:
             if (".xlsx" in entry and "~" not in entry):
@@ -41,6 +42,7 @@ def createFileList(search_path):
                         "filename":name,
                         }                
                 file_list.append(file_data)
+    print("done! found {} xlsx files".format(len(file_list)))
 
 
 
@@ -82,6 +84,7 @@ def print_file(file_to_print,output):
 if __name__== "__main__":
     start=datetime.now()
     createFileList(searchpath)
+    print("Make PDFs, might take a while...")
     for file in file_list:
         try:
             print_file(file.get("xlsx_path"), output_folder+"\{}".format(file.get("filename")))
@@ -94,7 +97,7 @@ if __name__== "__main__":
             ws = None
             xl = None
     print("done after {}".format(datetime.now()-start))
-    input("press any key to exit...")
+    input("press Enter to exit...")
 #print_file(r"C:\Users\winte\Desktop\Test\EW347.xlsx",r"C:\Users\winte\Desktop\Test\EW347")
 
 
