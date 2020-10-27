@@ -15,7 +15,7 @@ copy .exe file from the folder "dist" to target folder. double klick will start 
 -searches for "Laborjournal" in Cell(1,2)[resembles B1 and merged cells] of all sheets of the workbook
 -saves Sheet as PDF in ./export with pdfname= filename+sheetname
 
-Report any bugs and requests to "winterle@gmx.de" or on github "https://github.com/Echios/GeneralXLSXToPDF"
+Report any bugs and requests on github "https://github.com/Echios/GeneralXLSXToPDF" or via Mail (adress will be added later)
 
 # Testing environment:
     Win10 Home x64
